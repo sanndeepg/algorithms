@@ -7,12 +7,12 @@ public class BubbleSort {
 	public static void sort (int [] array ) {
 		
 		int size = array.length;
-		int internalIteration = 0;
-		int externalIteration = 0;
+		int internalIteration = 0; // Keeps track of comparisions count.
+		int externalIteration = 0; // Keeps track of array visits count.
 		
 		for (int i = 0; i < size - 1 - 1; i ++) {
 			externalIteration ++;
-			boolean isSwapDone = false;
+			boolean isSwapDone = false; // Checks whether array visit done is already sorted or not.
 			
 			for ( int j = 0; j < size - i - 1; j ++ ) {
 				internalIteration ++;
@@ -25,7 +25,7 @@ public class BubbleSort {
 				}
 			}
 			
-			if ( !isSwapDone ) break;
+			if ( !isSwapDone ) break; // if array visit doesn't done with single swap considers array is already sorted.  
 			
 		}
 		
